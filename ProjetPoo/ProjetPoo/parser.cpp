@@ -7,6 +7,7 @@
 
 #include "Pharmacie.hpp"
 
+using namespace std;
 // Définition de macro pour les tests d'ouverture de fichiers
 #define USAGE usage(argv[0])
 #define ARG_TEST_BEGIN(argstr,nbarg) \
@@ -46,13 +47,14 @@ int main(int argc, char** argv){
 	try { // renvoi d'une exception s'il y a un soucis
 		Pharmacie pharma(inFilename); // crée la pharmacie en faisant le parsing en même temps
 		//insérez vous méthodes ici
+        pharma.afficherMap();
 	} catch(const runtime_error& err) {
 		std::cerr << err.what() << "\n";
 		std::cerr << "Error while loading data file. Aborting." << std::endl;
 		return EXIT_FAILURE;
 	}
 	
-
+        cout<<"Success "<<endl;
 	return EXIT_SUCCESS;
 
 	}	

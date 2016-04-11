@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6D47836E1CB29749000D5947 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D47836B1CB29749000D5947 /* parser.cpp */; };
 		6D47836F1CB29749000D5947 /* Pharmacie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D47836C1CB29749000D5947 /* Pharmacie.cpp */; };
+		6D7F4CAA1CBBE92000D5F122 /* Histogramme.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D7F4CA81CBBE92000D5F122 /* Histogramme.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		6D47836B1CB29749000D5947 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
 		6D47836C1CB29749000D5947 /* Pharmacie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pharmacie.cpp; sourceTree = "<group>"; };
 		6D47836D1CB29749000D5947 /* Pharmacie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pharmacie.hpp; sourceTree = "<group>"; };
+		6D7F4CA81CBBE92000D5F122 /* Histogramme.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Histogramme.cpp; sourceTree = "<group>"; };
+		6D7F4CA91CBBE92000D5F122 /* Histogramme.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Histogramme.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				6D47836B1CB29749000D5947 /* parser.cpp */,
 				6D47836C1CB29749000D5947 /* Pharmacie.cpp */,
+				6D7F4CA81CBBE92000D5F122 /* Histogramme.cpp */,
+				6D7F4CA91CBBE92000D5F122 /* Histogramme.hpp */,
 				6D47836D1CB29749000D5947 /* Pharmacie.hpp */,
 			);
 			path = ProjetPoo;
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D7F4CAA1CBBE92000D5F122 /* Histogramme.cpp in Sources */,
 				6D47836E1CB29749000D5947 /* parser.cpp in Sources */,
 				6D47836F1CB29749000D5947 /* Pharmacie.cpp in Sources */,
 			);

@@ -19,6 +19,7 @@ class Pharmacie{
 		Pharmacie(string);
 		void parsePharma(ifstream&); // parse le fichier d'entrée
 		void parseMed(string); // parse un médicament
+        void afficherMap();
 		// rajoutez vos méthodes
 	
 };

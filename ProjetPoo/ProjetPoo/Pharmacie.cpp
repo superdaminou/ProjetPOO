@@ -49,3 +49,15 @@ void Pharmacie::parseMed(string s){
 	
 	meds.insert(pair<string, vector<string> >(nam, effects)); //insertion de la paire représentant le médicament dans la map
 }
+
+
+void Pharmacie::afficherMap(){
+    map<string,vector<string>>::iterator p;  //creation d'un iterateur p sur map
+    for(p = meds.begin(); p != meds.end(); p++)  //parcour de p
+    {
+        cout << p->first;   //affichage du nom de medoc
+        for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation terateur pour vecteur d'effet
+            std::cout << ' ' << *it;  //affichages des effets 
+        cout<<endl;
+    }
+}
