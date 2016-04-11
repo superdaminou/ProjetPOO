@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D4783651CB294B2000D5947 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4783641CB294B2000D5947 /* main.cpp */; };
 		6D47836E1CB29749000D5947 /* parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D47836B1CB29749000D5947 /* parser.cpp */; };
 		6D47836F1CB29749000D5947 /* Pharmacie.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D47836C1CB29749000D5947 /* Pharmacie.cpp */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		6D4783611CB294B2000D5947 /* ProjetPoo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjetPoo; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D4783641CB294B2000D5947 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6D47836B1CB29749000D5947 /* parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = parser.cpp; sourceTree = "<group>"; };
 		6D47836C1CB29749000D5947 /* Pharmacie.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pharmacie.cpp; sourceTree = "<group>"; };
 		6D47836D1CB29749000D5947 /* Pharmacie.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pharmacie.hpp; sourceTree = "<group>"; };
@@ -62,7 +60,6 @@
 		6D4783631CB294B2000D5947 /* ProjetPoo */ = {
 			isa = PBXGroup;
 			children = (
-				6D4783641CB294B2000D5947 /* main.cpp */,
 				6D47836B1CB29749000D5947 /* parser.cpp */,
 				6D47836C1CB29749000D5947 /* Pharmacie.cpp */,
 				6D47836D1CB29749000D5947 /* Pharmacie.hpp */,
@@ -127,7 +124,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D47836E1CB29749000D5947 /* parser.cpp in Sources */,
-				6D4783651CB294B2000D5947 /* main.cpp in Sources */,
 				6D47836F1CB29749000D5947 /* Pharmacie.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +245,7 @@
 				6D47836A1CB294B2000D5947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
