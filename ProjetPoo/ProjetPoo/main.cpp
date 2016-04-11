@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
+//#include "Pharmacie.hpp"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
