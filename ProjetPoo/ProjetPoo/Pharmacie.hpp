@@ -8,6 +8,7 @@
 #include <map>
 #include <vector>
 #include <string>
+#include "Histogramme.hpp"
 
 using namespace std;
 
@@ -20,6 +21,7 @@ class Pharmacie{
 		void parsePharma(ifstream&); // parse le fichier d'entrée
 		void parseMed(string); // parse un médicament
         void afficherMap();
+        void creationHistogramme();
 		// rajoutez vos méthodes
 	
 };

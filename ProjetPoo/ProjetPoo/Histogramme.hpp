@@ -11,13 +11,21 @@
 
 #include <stdio.h>
 #include <vector>
+#include <string.h>
+#include <stdlib.h>
+#include <iostream>
 
 
 using namespace std;
 class Histogramme{
 protected:
-    vector<string> effet;
-private:
+    vector<string> histo;
+    
+public:
+    Histogramme();
+    ~Histogramme();
+    void ajouterEffet(string effet);
+    void afficherHisto();
     
     
     
