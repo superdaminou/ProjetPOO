@@ -38,7 +38,7 @@ void Pharmacie::parseMed(string s){
 	 int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
 	 while(i < s.length()){ // boucle jusqu'à la fin de la ligne
 		t = s.find(',', i);
-         size_t j=s.find(' et ',i);
+        size_t j=s.find('et');
 		if( t >= s.length() or j>=s.length()){ // pas de vigule trouvée, on en est donc au dernier effet secondaire
 			effects.push_back(s.substr(i,s.length()-1-i));
 			break;
