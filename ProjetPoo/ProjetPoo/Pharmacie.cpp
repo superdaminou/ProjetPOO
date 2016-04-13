@@ -35,10 +35,11 @@ void Pharmacie::parseMed(string s){
 	 size_t t = 0;
 	 string nam = s.substr(0, z-1); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
 	 vector<string> effects;  // liste d'effets secondaires
-	 int i = s.find(z+2,s.end(),':'); // position du premier caractère après les ':'
+	 int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
 	 while(i < s.length()){ // boucle jusqu'à la fin de la ligne
 		t = s.find(',', i);
-		if( t >= s.length()){ // pas de vigule trouvée, on en est donc au dernier effet secondaire
+         size_t j=s.find(' et ',i);
+		if( t >= s.length() or j>=s.length()){ // pas de vigule trouvée, on en est donc au dernier effet secondaire
 			effects.push_back(s.substr(i,s.length()-1-i));
 			break;
 		}
