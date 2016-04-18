@@ -38,7 +38,6 @@ void Pharmacie::parseMed(string s){
     vector<string> effects;  // liste d'effets secondaires
     int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
     
-    cout << "test"<<endl;
     
     while(i < s.length()){ // boucle jusqu'à la fin de la ligne
         t = s.find(',', i);
