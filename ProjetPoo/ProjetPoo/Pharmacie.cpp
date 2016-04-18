@@ -10,36 +10,39 @@
 using namespace std;
 
 Pharmacie::Pharmacie(string s){
-	
-	//vérification que le fichier est valide
-	ifstream input(s.c_str());
+    
+    //vérification que le fichier est valide
+    ifstream input(s.c_str());
     if(input.good()) {//vérifie que le fichier est valide
-		parsePharma(input);
+        parsePharma(input);
     }
-	else
-		throw runtime_error("file not good");
-		//retourne une exception
+    else
+        throw runtime_error("file not good");
+    //retourne une exception
 }
 
 void Pharmacie::parsePharma(ifstream& in){
-		string s;
-		while(in.good()){ // tant que le fichier n'est pas vide
-			s = '\0';
-			getline(in,s,'\n');//récupère la ligne jusqu'à \n
-			parseMed(s);
-		}
+    string s;
+    while(in.good()){ // tant que le fichier n'est pas vide
+        s = '\0';
+        getline(in,s,'\n');//récupère la ligne jusqu'à \n
+        parseMed(s);
+    }
 }
 
 void Pharmacie::parseMed(string s){
-	 size_t z = s.find(':');
-	 size_t t = 0;
+    size_t z = s.find(':');
+    size_t t = 0;
     size_t j=0;
-	 string nam = s.substr(0, z-1); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
-	 vector<string> effects;  // liste d'effets secondaires
-	 int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
-	 while(i < s.length()){ // boucle jusqu'à la fin de la ligne
-		t = s.find(',', i);
-		if( t >= s.length()){ // pas de vigule trouvée, on en est donc au dernier effet secondaire
+    string nam = s.substr(0, z-1); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
+    vector<string> effects;  // liste d'effets secondaires
+    int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
+    
+    cout << "test"<<endl;
+    
+    while(i < s.length()){ // boucle jusqu'à la fin de la ligne
+        t = s.find(',', i);
+        if( t >= s.length()){ // pas de vigule trouvée, on en est donc au dernier effet secondaire
             j = s.find(" et",i);
             if(j>s.length()){
                 
@@ -59,6 +62,7 @@ void Pharmacie::parseMed(string s){
 	 }
 	
 	meds.insert(pair<string, vector<string> >(nam, effects)); //insertion de la paire représentant le médicament dans la map
+
 }
 
 
@@ -68,7 +72,7 @@ void Pharmacie::afficherMap(){
     {
         cout << p->first;   //affichage du nom de medoc
         for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation terateur pour vecteur d'effet
-            std::cout << ' ' << *it;  //affichages des effets 
+            std::cout << ' ' << *it;  //affichages des effets
         cout<<endl;
     }
 }
