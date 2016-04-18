@@ -47,7 +47,7 @@ void Pharmacie::parseMed(string s){
             }
             else{
                 //effects.push_back(s.substr(i,j-i));
-                effects.push_back(s.substr(j+4,s.length()-1-i));
+                effects.push_back(s.substr(j+4,s.length()-j));
             }
             break;
 		}
