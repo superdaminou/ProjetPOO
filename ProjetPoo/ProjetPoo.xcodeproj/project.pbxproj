@@ -65,9 +65,9 @@
 			children = (
 				6D47836B1CB29749000D5947 /* parser.cpp */,
 				6D47836C1CB29749000D5947 /* Pharmacie.cpp */,
+				6D47836D1CB29749000D5947 /* Pharmacie.hpp */,
 				6D7F4CA81CBBE92000D5F122 /* Histogramme.cpp */,
 				6D7F4CA91CBBE92000D5F122 /* Histogramme.hpp */,
-				6D47836D1CB29749000D5947 /* Pharmacie.hpp */,
 			);
 			path = ProjetPoo;
 			sourceTree = "<group>";
