@@ -83,11 +83,12 @@ void Pharmacie::creationHistogramme(){
     map<string,vector<string>>::iterator p;  //creation d'un iterateur p sur map
     for(p = meds.begin(); p != meds.end(); p++)  //parcour de p
     {
-        for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation terateur pour vecteur d'effet
+        for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation iterateur pour vecteur d'effet
         {
             histo.ajouterEffet(*it);
         }
     }
+    
     
     histo.afficherHisto();
     

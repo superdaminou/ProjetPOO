@@ -14,20 +14,20 @@
 #include <string.h>
 #include <stdlib.h>
 #include <iostream>
+#include <map>
 
 
 using namespace std;
 class Histogramme{
 protected:
-    vector<string> histo;
+    map<string, vector<string>> histo;
     
 public:
     Histogramme();
     ~Histogramme();
     void ajouterEffet(string effet);
     void afficherHisto();
-    
-    
+    void associerMedicament(string effet, string medoc);
     
 };
 

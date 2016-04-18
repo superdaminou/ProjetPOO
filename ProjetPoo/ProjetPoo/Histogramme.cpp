@@ -10,7 +10,7 @@
 
 
 Histogramme::Histogramme(){
-    histo=*new vector<string>;
+    histo=*new map<string,vector<string>>;
 }
 
 Histogramme::~Histogramme(){
@@ -19,16 +19,20 @@ Histogramme::~Histogramme(){
 
 
 void Histogramme::ajouterEffet(string effet){
-    vector<string>::iterator it;
-    it =find (histo.begin(),histo.end(),effet);
+    map<string,vector<string>>::iterator it;
+    it =histo.find(effet);
     if( it==histo.end()){
-        histo.push_back(effet);
+        histo[effet];
     }
 }
 
 void Histogramme::afficherHisto(){
-    vector<string>::iterator it;
+    map<string,vector<string>>::iterator it;
     for(it=histo.begin(); it!=histo.end();it++){
-        cout<<*it<<endl;
+        cout<<it->first<<endl;
     }
+}
+
+void Histogramme::associerMedicament(string effet,string medoc){
+    vector<string>::iterator it;
 }
