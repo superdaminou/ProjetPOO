@@ -2,9 +2,9 @@ Seretide 	: effets indésirables notoires : candidose buccale, hypokaliémie, pa
 Dafalgan 	: effets indésirables notoires : choc anaphylactique, érythème, leucopénie et neutropénie.
 Aspirine 	: effets indésirables notoires : choc anaphylactique, hyperpnée, vertiges et bronchospasme.
 Voltaren 	: effets indésirables notoires : vomissements, urticaire, céphalée, vertiges et somnolence.
-Kétoprofène 	: effets indésirables notoires : nausées, vertiges  et hyperkaliémie.
+Kétoprofène 	: effets indésirables notoires : nausées, vertiges et hyperkaliémie.
 Airomir 	: effets indésirables notoires : palpitations.
-Loratadine 	: effets indésirables notoires : vertiges, palpitations, et choc anaphylactique.
+Loratadine 	: effets indésirables notoires : vertiges, palpitations et choc anaphylactique.
 Smecta 		: effets indésirables notoires : vomissements et flatulence.
 Bipreterax	: effets indésirables notoires : céphalées, asthénie, vomissements et vertiges.
 Bétanol 	: effets indésirables notoires : asthénie et insomnie.
