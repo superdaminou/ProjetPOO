@@ -43,16 +43,17 @@ void Pharmacie::parseMed(string s){
             j = s.find(" et",i);
             if(j>s.length()){
                 
-                //effects.push_back(s.substr(i,s.length()-1-i));
+                effects.push_back(s.substr(i,s.length()-1-i));
             }
             else{
-                //effects.push_back(s.substr(i,j-i));
-                effects.push_back(s.substr(j+4,s.length()-j));
+                effects.push_back(s.substr(i,j-i));
+                size_t k=s.find_last_of('.');
+                effects.push_back(s.substr(j+4,k-j-4));
             }
             break;
 		}
 		else{ // il y a plusieurs effets secondaires à traiter encore
-            //effects.push_back(s.substr(i, t-i));
+            effects.push_back(s.substr(i, t-i));
 			i = t+2;	// on fait avancer i de la taille de la chaine + l'espace et la virgule
 		}
 	 }
