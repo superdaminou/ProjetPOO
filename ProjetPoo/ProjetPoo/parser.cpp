@@ -6,6 +6,7 @@
 #include <deque>
 
 #include "Pharmacie.hpp"
+#include "Histogramme.hpp"
 
 using namespace std;
 // Définition de macro pour les tests d'ouverture de fichiers
@@ -59,7 +60,9 @@ int main(int argc, char** argv){
             Pharmacie pharma(inFilename); // crée la pharmacie en faisant le parsing en même temps
             
             //insérez vous méthodes ici
-            pharma.creationHistogramme();
+            Histogramme histo(pharma);
+            histo.afficherHisto();
+            
             
         }
         catch(const runtime_error& err)
