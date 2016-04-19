@@ -92,4 +92,7 @@ void Pharmacie::creationHistogramme(){
     
     histo.afficherHisto();
     
+    histo.associerMedicament("ataxie","insuline");
+    histo.afficherHisto();
+    histo.associerMedicament("ataxie", "insuline");
 }
