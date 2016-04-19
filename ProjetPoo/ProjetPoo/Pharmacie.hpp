@@ -13,16 +13,24 @@
 using namespace std;
 
 class Pharmacie{
-	private:
-		map<string, vector<string> > meds; // A adapter à l'architecture choisie
+private:
+    map<string, vector<string> > meds; // A adapter à l'architecture choisie
 	
-	public:
-		Pharmacie(string);
-		void parsePharma(ifstream&); // parse le fichier d'entrée
-		void parseMed(string); // parse un médicament
-        void afficherMap();
-        void creationHistogramme();
-		// rajoutez vos méthodes
+public:
+    //Constructeur & Destructeur
+    Pharmacie(string);
+    ~Pharmacie();
+    
+    //Getter & Setter
+    map<string, vector<string> > getMeds();
+
+    
+    //Methode
+    void parsePharma(ifstream&); // parse le fichier d'entrée
+    void parseMed(string); // parse un médicament
+    void afficherMap();
+    void creationHistogramme();
+    // rajoutez vos méthodes
 	
 };
 

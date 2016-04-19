@@ -9,6 +9,14 @@
 
 using namespace std;
 
+/*
+ 
+ 
+        Constructeur et Destructeur
+ 
+ 
+ */
+
 Pharmacie::Pharmacie(string s){
     
     //vérification que le fichier est valide
@@ -21,6 +29,32 @@ Pharmacie::Pharmacie(string s){
     //retourne une exception
 }
 
+Pharmacie::~Pharmacie()
+{
+}
+
+
+/*
+ 
+ 
+        Getter & Setter
+ 
+ 
+*/
+map<string, vector<string> > Pharmacie::getMeds()
+{
+    return meds;
+    
+}
+
+
+/*
+ 
+ 
+        Methode
+ 
+ 
+ */
 void Pharmacie::parsePharma(ifstream& in){
     string s;
     while(in.good()){ // tant que le fichier n'est pas vide

@@ -15,6 +15,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <map>
+#include "Pharmacie.hpp"
 
 
 using namespace std;
@@ -24,6 +25,7 @@ protected:
     
 public:
     Histogramme();
+    Histogramme(Pharmacie med);
     ~Histogramme();
     void ajouterEffet(string effet);
     void afficherHisto();
