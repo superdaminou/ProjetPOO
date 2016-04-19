@@ -9,13 +9,11 @@
 
 using namespace std;
 
-/*
- 
- 
-        Constructeur et Destructeur
- 
- 
- */
+/************************************
+*************************************
+**** Constructeur et Destructeur ****
+*************************************
+************************************/
 
 Pharmacie::Pharmacie(string s){
     
@@ -34,13 +32,12 @@ Pharmacie::~Pharmacie()
 }
 
 
-/*
- 
- 
-        Getter & Setter
- 
- 
-*/
+/***********************
+************************
+**** Getter & Setter ***
+************************
+************************/
+
 map<string, vector<string> > Pharmacie::getMeds()
 {
     return meds;
@@ -48,13 +45,12 @@ map<string, vector<string> > Pharmacie::getMeds()
 }
 
 
-/*
- 
- 
-        Methode
- 
- 
- */
+/***************
+****************
+*** Methodes ***
+****************
+****************/
+
 void Pharmacie::parsePharma(ifstream& in){
     string s;
     while(in.good()){ // tant que le fichier n'est pas vide

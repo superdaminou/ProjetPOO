@@ -1,13 +1,11 @@
-//
-//  Histogramme.cpp
-//  ProjetPoo
-//
-//  Created by Damien Le Garrec on 11/04/2016.
-//  Copyright © 2016 MMD. All rights reserved.
-//
-
 #include "Histogramme.hpp"
 
+
+/************************************
+ *************************************
+ **** Constructeur et Destructeur ****
+ *************************************
+ ************************************/
 
 Histogramme::Histogramme(){
     histo=*new map<string,vector<string>>;
@@ -21,7 +19,7 @@ Histogramme::Histogramme(Pharmacie med)
     
     //iterator pour l'hitogramme
     map<string,vector<string>>::iterator iH = histo.begin();
-    vector <string>::iterator iHv = iH->second.begin();
+    //vector <string>::iterator iHv = iH->second.begin();
     
     for (map<string,vector<string>>::iterator iP=pharma.begin();iP != pharma.end();iP++)
     {
@@ -39,15 +37,7 @@ Histogramme::Histogramme(Pharmacie med)
                 
             }
             
-            
-            
-            
         }
-        
-        //on va traiter ici les medicaments
-        
-        
-        
         
     }
     
@@ -57,6 +47,12 @@ Histogramme::~Histogramme(){
     
 }
 
+
+/***************
+ ****************
+ *** Methodes ***
+ ****************
+ ****************/
 
 void Histogramme::ajouterEffet(string effet){
     map<string,vector<string>>::iterator it;

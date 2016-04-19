@@ -1,11 +1,3 @@
-//
-//  Histogramme.hpp
-//  ProjetPoo
-//
-//  Created by Damien Le Garrec on 11/04/2016.
-//  Copyright © 2016 MMD. All rights reserved.
-//
-
 #ifndef Histogramme_hpp
 #define Histogramme_hpp
 
@@ -24,9 +16,12 @@ protected:
     map<string, vector<string>> histo;
     
 public:
+    //Constructeur et Destructeur
     Histogramme();
     Histogramme(Pharmacie med);
     ~Histogramme();
+    
+    //Methodes
     void ajouterEffet(string effet);
     void afficherHisto();
     void afficherEffet();
