@@ -64,7 +64,7 @@ void Pharmacie::parseMed(string s){
     size_t z = s.find(':');
     size_t t = 0;
     size_t j=0;
-    string nam = s.substr(0, z-1); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
+    string nam = s.substr(0, z-2); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
     vector<string> effects;  // liste d'effets secondaires
     int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
     
@@ -104,25 +104,4 @@ void Pharmacie::afficherMap(){
             std::cout << ' ' << *it;  //affichages des effets
         cout<<endl;
     }
-}
-
-
-
-void Pharmacie::creationHistogramme(){
-    Histogramme histo;
-    map<string,vector<string>>::iterator p;  //creation d'un iterateur p sur map
-    for(p = meds.begin(); p != meds.end(); p++)  //parcour de p
-    {
-        for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation iterateur pour vecteur d'effet
-        {
-            histo.ajouterEffet(*it);
-        }
-    }
-    
-    
-    histo.afficherHisto();
-    
-    histo.associerMedicament("ataxie","insuline");
-    histo.afficherHisto();
-    histo.associerMedicament("ataxie", "insuline");
 }

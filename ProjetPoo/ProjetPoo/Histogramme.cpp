@@ -33,10 +33,14 @@ Histogramme::Histogramme(Pharmacie med)
             {
                 //l'effet n'a pas été trouvé il est donc absent de l histo
                 histo[*iPv];
-                iH->second.push_back(iP->first);
+                
+                histo[*iPv].push_back(iP->first);
                 
             }
-            
+            else{
+                histo[*iPv].push_back(iP->first);
+            }
+            //cout<<iP->first<<endl;
         }
         
     }
@@ -74,7 +78,7 @@ void Histogramme::afficherHisto(){
     for(it=histo.begin();it!=histo.end();it++){
         cout<<"effet : "<<it->first<<", medicaments associé : ";
         for(vector<string>::iterator ip=it->second.begin();ip!=it->second.end();ip++){
-            cout<<*ip;
+            cout<<*ip<<" ";
         }
         cout<<endl;
     }

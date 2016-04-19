@@ -17,15 +17,15 @@
 #include <map>
 #include "Pharmacie.hpp"
 
-
 using namespace std;
+
 class Histogramme{
 protected:
     map<string, vector<string>> histo;
     
 public:
-    Histogramme();
     Histogramme(Pharmacie med);
+    Histogramme();
     ~Histogramme();
     void ajouterEffet(string effet);
     void afficherHisto();
