@@ -23,14 +23,10 @@ Histogramme::Histogramme(Pharmacie med)
     map<string,vector<string>>::iterator iH = histo.begin();
     vector <string>::iterator iHv = iH->second.begin();
     
-    for (map<string,vector<string>>::iterator iP=pharma.begin();
-         iP != pharma.end();
-         iP++)
+    for (map<string,vector<string>>::iterator iP=pharma.begin();iP != pharma.end();iP++)
     {
         
-        for (vector <string>::iterator iPv = iP->second.begin();
-             iPv != iP->second.end();
-             iPv++)
+        for (vector <string>::iterator iPv = iP->second.begin();iPv != iP->second.end();iPv++)
         {
             
             //Pour chaque effet on compare avec histo pour savoir si il est deja présent
@@ -39,10 +35,6 @@ Histogramme::Histogramme(Pharmacie med)
             {
                 //l'effet n'a pas été trouvé il est donc absent de l histo
                 histo[*iPv];
-                
-                histo.insert(std::pair<string, vector<string>>(*iPv, *iPv->push_back(*iP)));
-                histo.
-
                 iH->second.push_back(iP->first);
                 
             }
