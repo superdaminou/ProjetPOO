@@ -28,6 +28,7 @@ public:
     //Constructeur et Destructeur
     Histogramme();
     Histogramme(Pharmacie med);
+    void ajoutFichier(Pharmacie med);
     ~Histogramme();
     void ajouterEffet(string effet);
     void afficherHisto();
@@ -35,6 +36,7 @@ public:
     void associerMedicament(string effet, string medoc);
     void rechercheParEffet(string effet);
     void rechercheParMedicaments(string medoc);
+    void ajouterMedicament(string medoc,vector<string>listEffet);
 };
 
 #endif /* Histogramme_hpp */

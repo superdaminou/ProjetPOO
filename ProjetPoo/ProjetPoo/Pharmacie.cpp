@@ -71,10 +71,10 @@ void Pharmacie::parseMed(string s){
     while(i < s.length()){ // boucle jusqu'à la fin de la ligne
         t = s.find(',', i);
         if( t >= s.length()){ // pas de vigule trouvée, on en est donc au dernier effet secondaire
-            j = s.find(" et",i);
+            j = s.find(" et ",i);
             if(j>s.length()){
                 
-                effects.push_back(s.substr(i,s.length()-1-i));
+                effects.push_back(s.substr(i,s.length()-2-i));
             }
             else{
                 effects.push_back(s.substr(i,j-i));

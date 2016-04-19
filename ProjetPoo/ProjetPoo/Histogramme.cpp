@@ -18,8 +18,6 @@ Histogramme::Histogramme(Pharmacie med)
     
     
     //iterator pour l'hitogramme
-    map<string,vector<string>>::iterator iH = histo.begin();
-    vector <string>::iterator iHv = iH->second.begin();
     
     for (map<string,vector<string>>::iterator iP=pharma.begin();iP != pharma.end();iP++)
     {
@@ -47,6 +45,9 @@ Histogramme::Histogramme(Pharmacie med)
     
 }
 
+
+
+
 Histogramme::~Histogramme(){
     
 }
@@ -57,6 +58,40 @@ Histogramme::~Histogramme(){
  *** Methodes ***
  ****************
  ****************/
+
+void Histogramme::ajoutFichier(Pharmacie med){
+    map<string,vector<string>> pharma = med.getMeds();
+    
+    
+    //iterator pour l'hitogramme
+    
+    for (map<string,vector<string>>::iterator iP=pharma.begin();iP != pharma.end();iP++)
+    {
+        
+        for (vector <string>::iterator iPv = iP->second.begin();iPv != iP->second.end();iPv++)
+        {
+            
+            //Pour chaque effet on compare avec histo pour savoir si il est deja présent
+            map<string,vector<string>>::iterator iF = histo.find(*iPv);
+            if(iF == histo.end())
+            {
+                //l'effet n'a pas été trouvé il est donc absent de l histo
+                histo[*iPv];
+                
+                histo[*iPv].push_back(iP->first);
+                
+            }
+            else{
+                histo[*iPv].push_back(iP->first);
+            }
+            //cout<<iP->first<<endl;
+        }
+        
+    }
+    
+    
+}
+
 
 void Histogramme::ajouterEffet(string effet){
     map<string,vector<string>>::iterator it;
@@ -76,7 +111,7 @@ void Histogramme::afficherEffet(){
 void Histogramme::afficherHisto(){
     map<string,vector<string>>::iterator it;
     for(it=histo.begin();it!=histo.end();it++){
-        cout<<"effet : "<<it->first<<", medicaments associé : ";
+        cout<<"effet :  "<<it->first<<", medicaments associé :        ";
         for(vector<string>::iterator ip=it->second.begin();ip!=it->second.end();ip++){
             cout<<*ip<<" ";
         }
@@ -104,7 +139,14 @@ void Histogramme::associerMedicament(string effet,string medoc){
             
         }
     }
-    cout<<"effet non trouvé"<<endl;
+    histo[effet];
+    histo[effet].push_back(medoc);
+}
+
+void Histogramme::ajouterMedicament(string medoc, vector<string> listeEffet){
+    for(vector<string>::iterator it=listeEffet.begin();it!=listeEffet.end();it++){
+        this->associerMedicament(*it,medoc);
+    }
 }
 
 

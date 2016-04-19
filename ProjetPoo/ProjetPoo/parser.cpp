@@ -53,8 +53,6 @@ int main(int argc, char** argv){
             inFilename = argv[i];
         }
         
-        cout<<"parser 2"<<endl;
-        
         try
         { // renvoi d'une exception s'il y a un soucis
             Pharmacie pharma(inFilename); // crée la pharmacie en faisant le parsing en même temps
@@ -62,8 +60,8 @@ int main(int argc, char** argv){
             //insérez vous méthodes ici
             Histogramme histo(pharma);
             //histo.afficherHisto();
-            histo.rechercheParMedicaments("Dafalgan");
-            
+            histo.afficherHisto();
+            histo.rechercheParMedicaments("Loratadine");
             
         }
         catch(const runtime_error& err)
