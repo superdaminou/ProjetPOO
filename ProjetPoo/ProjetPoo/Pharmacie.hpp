@@ -28,6 +28,7 @@ public:
     void parsePharma(ifstream&); // parse le fichier d'entrée
     void parseMed(string); // parse un médicament
     void afficherMap();
+    void creationHistogramme();
     // rajoutez vos méthodes
 	
 };

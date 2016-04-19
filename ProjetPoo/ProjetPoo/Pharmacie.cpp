@@ -6,7 +6,6 @@
 #include <map>
 
 #include "Pharmacie.hpp"
-
 using namespace std;
 
 /************************************
@@ -106,23 +105,3 @@ void Pharmacie::afficherMap(){
     }
 }
 
-
-
-void Pharmacie::creationHistogramme(){
-    Histogramme histo;
-    map<string,vector<string> >::iterator p;  //creation d'un iterateur p sur map
-    for(p = meds.begin(); p != meds.end(); p++)  //parcour de p
-    {
-        for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation iterateur pour vecteur d'effet
-        {
-            histo.ajouterEffet(*it);
-        }
-    }
-    
-    
-    histo.afficherHisto();
-    
-    histo.associerMedicament("ataxie","insuline");
-    histo.afficherHisto();
-    histo.associerMedicament("ataxie", "insuline");
-}

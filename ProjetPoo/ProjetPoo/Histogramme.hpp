@@ -16,6 +16,7 @@
 #include <iostream>
 #include <map>
 #include "Pharmacie.hpp"
+
 using namespace std;
 
 
@@ -26,7 +27,7 @@ protected:
 public:
     //Constructeur et Destructeur
     Histogramme();
-    Histogramme(map<string,vector<string> > med);
+    Histogramme(Pharmacie med);
     ~Histogramme();
     void ajouterEffet(string effet);
     void afficherHisto();

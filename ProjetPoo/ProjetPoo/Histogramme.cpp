@@ -11,15 +11,15 @@ Histogramme::Histogramme(){
     histo=*new map<string,vector<string>>;
 }
 
-Histogramme::Histogramme(map<string,vector<string>> med)
+Histogramme::Histogramme(Pharmacie med)
 {
     //On recup la pharmacie
-    map<string,vector<string>> pharma = med;
+    map<string,vector<string>> pharma = med.getMeds();
     
     
     //iterator pour l'hitogramme
     map<string,vector<string>>::iterator iH = histo.begin();
-    //vector <string>::iterator iHv = iH->second.begin();
+    vector <string>::iterator iHv = iH->second.begin();
     
     for (map<string,vector<string>>::iterator iP=pharma.begin();iP != pharma.end();iP++)
     {
