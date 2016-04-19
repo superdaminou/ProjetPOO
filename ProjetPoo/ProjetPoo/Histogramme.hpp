@@ -8,17 +8,17 @@
 #include <iostream>
 #include <map>
 #include "Pharmacie.hpp"
-
-
 using namespace std;
+
+
 class Histogramme{
 protected:
-    map<string, vector<string>> histo;
+    map<string, vector<string> > histo;
     
 public:
     //Constructeur et Destructeur
     Histogramme();
-    Histogramme(Pharmacie med);
+    Histogramme(map<string,vector<string> > med);
     ~Histogramme();
     
     //Methodes

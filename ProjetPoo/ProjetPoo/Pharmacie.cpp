@@ -96,7 +96,7 @@ void Pharmacie::parseMed(string s){
 
 
 void Pharmacie::afficherMap(){
-    map<string,vector<string>>::iterator p;  //creation d'un iterateur p sur map
+    map<string,vector<string> >::iterator p;  //creation d'un iterateur p sur map
     for(p = meds.begin(); p != meds.end(); p++)  //parcour de p
     {
         cout << p->first;   //affichage du nom de medoc
@@ -110,7 +110,7 @@ void Pharmacie::afficherMap(){
 
 void Pharmacie::creationHistogramme(){
     Histogramme histo;
-    map<string,vector<string>>::iterator p;  //creation d'un iterateur p sur map
+    map<string,vector<string> >::iterator p;  //creation d'un iterateur p sur map
     for(p = meds.begin(); p != meds.end(); p++)  //parcour de p
     {
         for (std::vector<string>::iterator it = p->second.begin() ; it != p->second.end(); ++it)  //creation iterateur pour vecteur d'effet

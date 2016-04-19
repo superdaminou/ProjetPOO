@@ -11,10 +11,10 @@ Histogramme::Histogramme(){
     histo=*new map<string,vector<string>>;
 }
 
-Histogramme::Histogramme(Pharmacie med)
+Histogramme::Histogramme(map<string,vector<string>> med)
 {
     //On recup la pharmacie
-    map<string,vector<string>> pharma = med.getMeds();
+    map<string,vector<string>> pharma = med;
     
     
     //iterator pour l'hitogramme
