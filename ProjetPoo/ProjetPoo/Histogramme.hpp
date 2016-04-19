@@ -29,6 +29,7 @@ public:
     ~Histogramme();
     void ajouterEffet(string effet);
     void afficherHisto();
+    void afficherEffet();
     void associerMedicament(string effet, string medoc);
     
 };

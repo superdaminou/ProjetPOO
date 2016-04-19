@@ -74,13 +74,43 @@ void Histogramme::ajouterEffet(string effet){
     }
 }
 
-void Histogramme::afficherHisto(){
+void Histogramme::afficherEffet(){
     map<string,vector<string>>::iterator it;
     for(it=histo.begin(); it!=histo.end();it++){
         cout<<it->first<<endl;
     }
 }
 
+void Histogramme::afficherHisto(){
+    map<string,vector<string>>::iterator it;
+    for(it=histo.begin();it!=histo.end();it++){
+        cout<<"effet : "<<it->first<<", medicaments associé : ";
+        for(vector<string>::iterator ip=it->second.begin();ip!=it->second.end();ip++){
+            cout<<*ip;
+        }
+        cout<<endl;
+    }
+}
+
 void Histogramme::associerMedicament(string effet,string medoc){
-    vector<string>::iterator it;
+    map<string,vector<string>>::iterator it;
+    for(it=histo.begin();it!=histo.end();it++){
+        //cout<<it->first<<" "<<endl;
+        if(it->first==effet){
+            cout<<"effet trouver"<<endl;
+            for(vector<string>::iterator ip=it->second.begin();ip!=it->second.end();ip++){
+                cout<<*ip<<" ";
+                if(*ip==medoc){
+                    cout<<" effet et medicaments deja associé"<<endl;
+                    return;
+                }
+                
+            }
+            it->second.push_back(medoc);
+            cout<<"association ajouté"<<endl;
+            return;
+            
+        }
+    }
+    cout<<"effet non trouvé"<<endl;
 }
