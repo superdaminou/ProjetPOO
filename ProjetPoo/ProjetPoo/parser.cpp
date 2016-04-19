@@ -61,7 +61,8 @@ int main(int argc, char** argv){
             
             //insérez vous méthodes ici
             Histogramme histo(pharma);
-            histo.afficherHisto();
+            //histo.rechercheParEffet("vomissements");
+            histo.rechercheParMedicaments("Smecta");
             
             
         }

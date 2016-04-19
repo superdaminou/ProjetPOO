@@ -33,7 +33,8 @@ public:
     void afficherHisto();
     void afficherEffet();
     void associerMedicament(string effet, string medoc);
-    
+    void rechercheParEffet(string effet);
+    void rechercheParMedicaments(string medoc);
 };
 
 #endif /* Histogramme_hpp */

@@ -106,3 +106,40 @@ void Histogramme::associerMedicament(string effet,string medoc){
     }
     cout<<"effet non trouvé"<<endl;
 }
+
+
+void Histogramme::rechercheParEffet(string effet){
+    map<string, vector<string> >::iterator iF=histo.find(effet);
+    if(iF!=histo.end()){
+        cout<<"Les medicaments provoquants des "<<effet<<" sont :";
+        for(vector<string>::iterator it=histo[effet].begin();it!=histo[effet].end();it++){
+            cout<<*it<<" ";
+        }
+    }
+    else{
+        cout<<"effet non trouvé"<<endl;
+    }
+    cout<<endl;
+}
+
+
+
+void Histogramme::rechercheParMedicaments(string medoc){
+    map<string, vector<string> >::iterator it;
+    for(it=histo.begin();it!=histo.end();it++){
+        vector <string>::iterator iP;
+        for(iP=it->second.begin();iP!=it->second.end();iP++){
+            if(*iP==medoc){
+                for(iP=it->second.begin();iP!=it->second.end();iP++){
+                    if(*iP!=medoc){
+                        cout<<*iP<<" ";
+                    }
+                }
+                break;
+                
+            }
+        }
+    }
+    cout<<"effet non trouver"<<endl;
+    
+}
