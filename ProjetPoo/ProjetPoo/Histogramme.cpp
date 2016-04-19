@@ -126,20 +126,22 @@ void Histogramme::rechercheParEffet(string effet){
 
 void Histogramme::rechercheParMedicaments(string medoc){
     map<string, vector<string> >::iterator it;
+    cout<<"les medicaments partageant les meme effets que "<<medoc<<" sont : "<<endl;
     for(it=histo.begin();it!=histo.end();it++){
         vector <string>::iterator iP;
         for(iP=it->second.begin();iP!=it->second.end();iP++){
-            if(*iP==medoc){
+            if(*iP==medoc && it->second.size()>1){
+                cout<<"pour "<<it->first<<" : ";
                 for(iP=it->second.begin();iP!=it->second.end();iP++){
                     if(*iP!=medoc){
                         cout<<*iP<<" ";
                     }
                 }
+                cout<<endl;
                 break;
                 
             }
         }
     }
-    cout<<"effet non trouver"<<endl;
     
 }

@@ -63,7 +63,7 @@ void Pharmacie::parseMed(string s){
     size_t z = s.find(':');
     size_t t = 0;
     size_t j=0;
-    string nam = s.substr(0, z-2); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
+    string nam = s.substr(0, z-1); // nom du médicament (de la position 0 dans le string à z-1, vu qu'il y a un espace avant ':')
     vector<string> effects;  // liste d'effets secondaires
     int i = s.find_last_of(':')+2; // position du premier caractère après les ':'
     
